@@ -29,9 +29,16 @@
     <div id="content" class="container my-4 text-center">
         <h1 class="title">Solve the Following Problem on Whiteboards and Check Your Answer at the End:</h1>
         <sub>The question will disappear once you press the "Show Answer" button.</sub>
+
+
         <div id="imgURLParamNotPresent" class="alert alert-warning d-none" role="alert">
             Please make sure the imgURL Parameter has a image URL!
         </div>
+        <div id="invalidURL" class="alert alert-warning d-none" role="alert">
+            Please make sure imgURL Parameter is a valid URL, and the link exists!
+        </div>
+
+
         <div id="question">
             <img id="mathQ-img"><br>
             <a id="imgURLOpenInNewTab" target="_blank" class="d-none">Image sized weird? Click Here.</a>
@@ -42,7 +49,7 @@
             <div>
                 <div id="answer" class="d-none">
                     <h1 class="title">Answer:</h1>
-                    <img id="mathA-img">
+                    <img id="mathA-img"><br>
                     <a id="imgURLOpenInNewTabAnswer" target="_blank" class="d-none">Image sized weird? Click Here.</a>
                 </div>
             </div>

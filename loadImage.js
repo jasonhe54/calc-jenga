@@ -10,7 +10,7 @@ function loadImage() {
         return;
     }
     // Check if imgURL is a valid URL
-    if (!isValidURL(paramsObj.imgURL)) {
+    if (!isValidURL(paramsObj.imgURL) /*|| !responseStatusOK(paramsObj.imgURL)*/) {
         console.log('Invalid URL provided');
         document.getElementById('invalidURL').classList.remove('d-none');
         return;
@@ -31,6 +31,22 @@ function loadImage() {
         answerImageAnchor.setAttribute('href', `${paramsObj.imgURL}/answer`);
     }
 }
+
+// function responseStatusOK(url) {
+//     // check status code of the imgURL provided
+//     fetch(url, {mode: 'no-cors'})
+//         .then(response => {
+//             console.log('response:', response)
+//             if (!response.ok) {
+//                 console.log('Invalid URL provided, status code:', response.status);
+//                 document.getElementById('invalidURL').classList.remove('d-none');
+//                 return false;
+//             } else {
+//                 console.log('Valid URL provided, status code:', response.status);
+//                 return true;
+//             }
+//         });
+// }
 
 function isValidURL(url) {
     try {
