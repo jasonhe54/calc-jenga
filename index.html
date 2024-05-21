@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculus Jenga Questions Unit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar bg-light">
+        <div class="container-fluid d-flex">
+            <h1 class="navbar-brand mb-0 h1 mx-auto">Calculus Jenga Questions</h1><a href="https://github.com/jasonhe54/calc-jenga" class="text-dark bi bi-github float-right" target="_blank"></a> 
+        </div>
+    </nav>
+
+    <!--
+        IMAGE URL FORMATS:
+        https://*.*/?imgURL=* //Root URL on QR Code with imgURL parameter
+        https://*.*/shortLink //Shortened URL which is passed into the imgURL parameter
+        https://*.*/shortLink/Answer //Shortened URL to the Answer Image
+
+        OPTIONAL, NOT IMPLEMENTED YET:
+        https://*.*/shortLink/v* //Shortened URL with version number (imagine multiple sets of questions)
+        https://*.*/shortLink/v*/Answer //Shortened URL to the Answer Image with version number
+    -->
+
+    <div id="content" class="container my-4 text-center">
+        <h1 class="title">Solve the Following Problem on Whiteboards and Check Your Answer at the End:</h1>
+        <sub>The question will disappear once you press the "Show Answer" button.</sub>
+        <div id="imgURLParamNotPresent" class="alert alert-warning d-none" role="alert">
+            Please make sure the imgURL Parameter has a image URL!
+        </div>
+        <div id="question">
+            <img id="mathQ-img"><br>
+            <a id="imgURLOpenInNewTab" target="_blank" class="d-none">Image sized weird? Click Here.</a>
+            <hr>
+        </div>
+        <div>
+            <button id="showAnswer" class="btn btn-primary d-none">Show Answer</button>
+            <div>
+                <div id="answer" class="d-none">
+                    <h1 class="title">Answer:</h1>
+                    <img id="mathA-img">
+                    <a id="imgURLOpenInNewTabAnswer" target="_blank" class="d-none">Image sized weird? Click Here.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="fixed-bottom text-center">
+        Created By: &lt;INSERT NAME&gt; <span id="resetDisplay" class="bi bi-bricks"></span>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="loadImage.js"></script>
+    <script src="showAnswer.js"></script>
+    <script src="resetDisplay.js"></script>
+</body>
+</html>

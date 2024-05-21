@@ -1,0 +1,23 @@
+footer {
+    background-color: white;
+}
+
+body {
+    padding-bottom: 15px;
+}
+
+#mathQ-img, #mathA-img {
+    width: 50%;
+    height: auto;
+    max-width: 300;
+    /* max-height: 75%; */
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+sub {
+    bottom: 0em; /* overwrites bootstrap css */
+}
