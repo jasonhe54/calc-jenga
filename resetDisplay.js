@@ -1,3 +1,4 @@
+/*
 document.getElementById('resetDisplay').addEventListener('click', function() {
     let answerDIV = document.getElementById('answer');
     let answerBTN = document.getElementById('showAnswer');
@@ -7,3 +8,4 @@ document.getElementById('resetDisplay').addEventListener('click', function() {
     questionDIV.classList.remove('d-none');
     console.log('Resetting display')
 });
+*/
