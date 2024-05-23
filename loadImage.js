@@ -21,14 +21,16 @@ function loadImage() {
         imageAnchor.setAttribute('href', paramsObj.imgURL);
         imageAnchor.classList.remove('d-none');
 
-        let answerBTN = document.getElementById('showAnswer');
-        answerBTN.classList.remove('d-none');
+    /* Show Answer Button
+        // let answerBTN = document.getElementById('showAnswer');
+        // answerBTN.classList.remove('d-none');
 
-        // load answer image
-        let answerImageTag = document.getElementById('mathA-img');
-        let answerImageAnchor = document.getElementById('imgURLOpenInNewTabAnswer');
-        answerImageTag.src = `${paramsObj.imgURL}/answer`;
-        answerImageAnchor.setAttribute('href', `${paramsObj.imgURL}/answer`);
+        // // load answer image
+        // let answerImageTag = document.getElementById('mathA-img');
+        // let answerImageAnchor = document.getElementById('imgURLOpenInNewTabAnswer');
+        // answerImageTag.src = `${paramsObj.imgURL}/answer`;
+        // answerImageAnchor.setAttribute('href', `${paramsObj.imgURL}/answer`);
+    */
     }
 }
 
