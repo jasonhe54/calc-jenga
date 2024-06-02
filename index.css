@@ -6,7 +6,7 @@ body {
     padding-bottom: 15px;
 }
 
-#mathQ-img, #mathA-img {
+#mathQ-img, #mathQ-img-bc, #mathA-img {
     width: 50%;
     height: auto;
     max-width: 300;

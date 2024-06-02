@@ -31,7 +31,8 @@ function loadImage() {
         // answerImageTag.src = `${paramsObj.imgURL}/answer`;
         // answerImageAnchor.setAttribute('href', `${paramsObj.imgURL}/answer`);
     */
-    }
+    };
+    evalForBC(paramsObj.imgURL);
 }
 
 // function responseStatusOK(url) {
@@ -57,6 +58,39 @@ function isValidURL(url) {
     } catch (error) {
         return false;
     }
+}
+
+function evalForBC(imgURL) {
+    // require imgURL parameter
+    if (!imgURL) {
+        console.log('No image URL provided');
+        return;
+    }
+    let imageURL = new URL(imgURL); // in form of 'https://sl.jenga.he54.me/*'
+    console.log('imageURL:', imageURL);
+    let path = imageURL.pathname; // returns '/*'
+    console.log('path:', path);
+
+    let bcImgURL = returnBCImgURL(imgURL);
+    let imageTag = document.getElementById('mathQ-img-bc');
+    let imageAnchor = document.getElementById('imgURLOpenInNewTab-bc');
+
+    switch(path) {
+        case '/1':
+        // case '/2':
+            imageTag.src = bcImgURL;
+            imageAnchor.setAttribute('href', bcImgURL);
+            document.getElementById('question-bc').classList.remove('d-none');
+            break;
+        default:
+            console.log('path is not a BC case');
+            break;
+    }
+}
+
+function returnBCImgURL(imgURL) {
+    let bcImgURL = imgURL + '/bc';
+    return bcImgURL;
 }
 
 window.onload = loadImage();

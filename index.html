@@ -19,7 +19,8 @@
         IMAGE URL FORMATS:
         https://*.*/?imgURL=* //Root URL on QR Code with imgURL parameter
         https://*.*/shortLink //Shortened URL which is passed into the imgURL parameter
-        https://*.*/shortLink/Answer //Shortened URL to the Answer Image
+        https://*.*/shortLink/bc //Shortened URL for BC Questions => dynamically evaluated in loadImage.js
+        https://*.*/shortLink/Answer //Shortened URL to the Answer Image //NOT IN USE
 
         OPTIONAL, NOT IMPLEMENTED YET:
         https://*.*/shortLink/v* //Shortened URL with version number (imagine multiple sets of questions)
@@ -44,6 +45,12 @@
             <a id="imgURLOpenInNewTab" target="_blank" class="d-none">Image sized weird? Click Here.</a>
             <hr>
         </div>
+        <div id="question-bc" class="d-none">
+            <h2>BC QUESTION</h2>
+            <img id="mathQ-img-bc"><br>
+            <a id="imgURLOpenInNewTab-bc" target="_blank">Image sized weird? Click Here.</a>
+            <hr>
+        </div>
         <div>
             <button id="showAnswer" class="btn btn-primary d-none">Show Answer</button>
             <div>
@@ -64,6 +71,6 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     <script src="loadImage.js"></script>
     <script src="showAnswer.js"></script>
-    <script src="resetDisplay.js"></script>
+    <!-- <script src="resetDisplay.js"></script> -->
 </body>
 </html>
