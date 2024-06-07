@@ -93,4 +93,4 @@ function returnBCImgURL(imgURL) {
     return bcImgURL;
 }
 
-window.onload = loadImage;
+window.onload = loadImage();

@@ -12,4 +12,4 @@ function loadQuestionNumber() {
     let title = `Question Number ${questionNumber}`;
     document.getElementById('questionNumber').innerText = title;
 }
-window.onload = loadQuestionNumber;
+window.onload = loadQuestionNumber();
