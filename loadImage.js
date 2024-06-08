@@ -76,8 +76,19 @@ function evalForBC(imgURL) {
     let imageAnchor = document.getElementById('imgURLOpenInNewTab-bc');
 
     switch(path) {
-        case '/1':
-        // case '/2':
+        case '/12':
+        case '/15':
+        case '/19':
+        case '/21':
+        case '/22':
+        case '/24':
+        case '/29':
+        case '/31':
+        case '/33':
+        case '/34':
+        case '/35':
+        case '/36':
+        case '/37':
             imageTag.src = bcImgURL;
             imageAnchor.setAttribute('href', bcImgURL);
             document.getElementById('question-bc').classList.remove('d-none');
