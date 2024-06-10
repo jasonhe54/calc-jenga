@@ -7,6 +7,20 @@ function showCustomQuestionSelector() {
     section.classList.remove('d-none');
 }
 
+function getCurrentQuestionNumber() {
+    let params = window.location.search;
+    let urlParams = new URLSearchParams(params);
+    let paramsObj = Object.fromEntries(urlParams.entries());
+
+    if (!urlParams.has('imgURL')) {
+        console.log('No image URL provided therefore, no question number provided, thus no instructions can be loaded');
+        return;
+    }
+
+    let questionNumber = paramsObj.imgURL.split('/').pop(); // returns 'num' in https://*.*/?imgURL=https://*.*/shortLink/num
+    return questionNumber;
+}
+
 document.getElementById('customQuestionSelectorButton').addEventListener('click', function () {
     showCustomQuestionSelector();
 })
@@ -24,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function () {
             optionText = `Q${i} (BC)`;
         } else {
             optionText = `Q${i}`;
+        }
+        if (i == getCurrentQuestionNumber()) {
+            option.selected = true;
         }
         option.innerText = optionText;
         selector.appendChild(option);
