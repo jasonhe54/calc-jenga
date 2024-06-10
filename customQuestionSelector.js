@@ -47,11 +47,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// handle submit button click
+// handle Go to Selected Question button click
 document.getElementById('customQuestionSelectorSubmit').addEventListener('click', function () {
     let selector = document.getElementById('questionSelectorDropdown');
     let selectedQuestion = selector.value;
     let pageURL = window.location.href.split('?')[0] // strips query strings
     let imgURL = `https://sl.jenga.he54.me/${selectedQuestion}`;
+    window.location.href = `${pageURL}?imgURL=${imgURL}`;
+});
+
+// handle Go to Next Question button click
+document.getElementById('customQuestionSelectorGoNext').addEventListener('click', function () {
+    let currentQuestionNumber = getCurrentQuestionNumber();
+    let nextQuestionNumber = parseInt(currentQuestionNumber) + 1;
+    let pageURL = window.location.href.split('?')[0] // strips query strings
+    let imgURL = `https://sl.jenga.he54.me/${nextQuestionNumber}`;
     window.location.href = `${pageURL}?imgURL=${imgURL}`;
 });
