@@ -21,9 +21,9 @@ function getCurrentQuestionNumber() {
     return questionNumber;
 }
 
-document.getElementById('customQuestionSelectorButton').addEventListener('click', function () {
-    showCustomQuestionSelector();
-})
+// document.getElementById('customQuestionSelectorButton').addEventListener('click', function () {
+//     showCustomQuestionSelector();
+// })
 
 // on DOM loaded
 document.addEventListener('DOMContentLoaded', function () {
