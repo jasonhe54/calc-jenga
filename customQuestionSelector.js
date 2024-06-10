@@ -14,7 +14,7 @@ document.getElementById('customQuestionSelectorButton').addEventListener('click'
 // on DOM loaded
 document.addEventListener('DOMContentLoaded', function () {
     let selector = document.getElementById('questionSelectorDropdown');
-    let bcQuestionNumberArray = [12, 15, 19, 21, 22, 24, 29, 31, 33, 34, 35, 36, 37];
+    let bcQuestionNumberArray = [7, 8, 12, 15, 19, 21, 22, 24, 29, 31, 33, 34, 35, 36, 37];
     // create option elements for each question from 1 through 54
     for (let i = 1; i <= 54; i++) {
         let option = document.createElement('option');

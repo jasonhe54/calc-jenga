@@ -76,6 +76,8 @@ function evalForBC(imgURL) {
     let imageAnchor = document.getElementById('imgURLOpenInNewTab-bc');
 
     switch(path) {
+        case '/7':
+        case '/8':
         case '/12':
         case '/15':
         case '/19':
