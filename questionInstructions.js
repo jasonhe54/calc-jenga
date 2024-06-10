@@ -12,6 +12,7 @@ function loadQuestionInstructions() {
     switch(questionNumber) {
         case '5':
         case '10':
+            document.getElementById('questionInstructionsAlert').classList.remove('d-none');
             document.getElementById('questionInstructionsAlert').innerText = 'You may use a calculator for this question to arrive at a final answer, however you must, at the bare minimum, integrate the function by hand. Make sure this is on your whiteboard.';
             break;
     }
