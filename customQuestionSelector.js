@@ -64,3 +64,17 @@ document.getElementById('customQuestionSelectorGoNext').addEventListener('click'
     let imgURL = `https://sl.jenga.he54.me/${nextQuestionNumber}`;
     window.location.href = `${pageURL}?imgURL=${imgURL}`;
 });
+
+// handle Go to PRevious Question button click
+document.getElementById('customQuestionSelectorGoPrevious').addEventListener('click', function () {
+    let currentQuestionNumber = getCurrentQuestionNumber();
+    if (currentQuestionNumber == 1) {
+        console.log('Cannot go to previous question because current question is 1');
+        document.getElementById('customQuestionSelectorGoPrevious').setAttribute('disabled');
+        return;
+    }
+    let nextQuestionNumber = parseInt(currentQuestionNumber) - 1;
+    let pageURL = window.location.href.split('?')[0] // strips query strings
+    let imgURL = `https://sl.jenga.he54.me/${nextQuestionNumber}`;
+    window.location.href = `${pageURL}?imgURL=${imgURL}`;
+});
